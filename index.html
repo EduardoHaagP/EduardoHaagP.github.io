@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-        <link rel="stylesheet" href="style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <h1>primeiro commitz</h1>
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1>primeiro commit</h1>
+
+    <form action="./">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome">
+        
+        <label for="senha">Senha</label>
+        <input type="password" name="senha" id="senha">
+        
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+
+        <label for="idade">Idade</label>
+        <input type="number" name="idade" id="idade">
+
+        <label for="data">data</label>
+        <input type="date" name="data" id="data">
+
+        <div class="checkbox">
+            <input type="checkbox" name="termos" id="termos">
+            <label for="termos">Aceito os termos</label>
+        </div>
+        <div class="radio">
+            <input type="radio" name="retirada" id="retirada">
+            <label for="retirada">Retirada na loja</label>
+        </div>
+
+        
+
+        <button>Enviar</button>
+    </form>
+
+
+</body>
+
 </html>
