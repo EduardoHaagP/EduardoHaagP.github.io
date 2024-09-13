@@ -32,10 +32,22 @@
             <label for="termos">Aceito os termos</label>
         </div>
         <div class="radio">
-            <input type="radio" name="retirada" id="retirada">
+            <input type="radio" name="r" id="retirada">
             <label for="retirada">Retirada na loja</label>
         </div>
+        <div class="radio">
+            <input type="radio" name="r" id="entrega">
+            <label for="entrega">Entrega em casa</label>            
+        </div>
 
+        <label for="parcelas">   
+            <select name="parcelas" id="parcelas">
+                <option value="1x">1x de R$ 200</option>
+                <option value="2x">2x de R$ 200</option>
+            </select>
+        </label>
+        
+        <textarea name="mensagem" id="mensagem" rows="5"></textarea>
         
 
         <button>Enviar</button>
