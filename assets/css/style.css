@@ -1,0 +1,121 @@
+body{
+    margin: 0;
+    background-color: #f2f2f2;
+}
+#conteudo{
+    margin: 0rem 13rem;
+}
+a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+/* header*/
+header{
+    margin-top: 2rem;
+}
+
+header div{
+    display: flex;
+    justify-content: space-between;
+}
+
+header h1{
+    margin: 0;
+    font: 2rem Boldonse;
+    color: #4D6A6D;
+    font-size: 1.5rem;
+}
+header h2{
+    padding-top: .8rem;
+    margin: 0;
+    margin-left: 1rem;
+    font: 1.5rem Blinker;
+    color: #4D6A6D;
+    font-size: 1.5rem;
+}
+
+header ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header li{
+    margin: 0 1rem;
+    list-style: none;
+    font: 1.5rem Blinker;
+    color: #4D6A6D;
+    cursor: pointer;
+    position: relative;
+    padding-top: 10px;
+}
+
+header li::after {
+    content: ""; 
+    position: absolute;
+    left: 0;
+    bottom: 0.4rem; 
+    width: 0;
+    height: 0.125rem; 
+    background-color: #4D6A6D; 
+    transition: width 0.3s ease-in-out;
+}
+
+header li:hover::after {
+    width: 100%; 
+}
+
+/*main*/
+main {
+    margin-top: 5rem;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 2rem; 
+}
+
+main div.texto {
+    max-width: 50%; 
+}
+
+main h1 {
+    font: bold 2.5rem "Bowlby One SC", sans-serif;
+    color: #4D6A6D;
+    margin-bottom: 1rem;
+}
+
+main h2 {
+    font: 1.5rem "Blinker", sans-serif;
+    color: #4D6A6D;
+    line-height: 1.6;
+}
+
+main h3 {
+    font: bold 1.2rem "Blinker", sans-serif;
+    color: #4D6A6D;
+    margin-top: 2rem;
+}
+
+main a {
+    display: inline-block;
+    background-color: #D0DDD7;
+    padding: 10px 20px;
+    margin-top: 1rem;
+    border-radius: 0.25rem;
+    color: #4D6A6D;
+    font: 1.2rem "Blinker", sans-serif;
+    text-decoration: none;
+}
+
+main a:hover {
+    background-color: #4D6A6D;
+    color: #D0DDD7;
+}
+
+
+main img {
+    width: 40%; 
+    max-width: 550px;
+}
+
