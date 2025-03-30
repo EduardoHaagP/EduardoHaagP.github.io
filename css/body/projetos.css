@@ -1,0 +1,65 @@
+#projetos h1{
+    font: 2.5rem "League Spartan";
+    color: #4D6A6D;
+    margin-bottom: 6rem;
+}
+#projetosConteudo{
+    margin: 2rem 10rem;
+    display: grid;
+    grid-template-columns: 3fr 1fr 3fr;
+}
+#InformacaoSuperTrunfoTitulo{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+}
+#InformacaoSuperTrunfoTitulo img{
+    max-width: 10rem;
+}
+
+#InformacaoSuperTrunfoTitulo h2{
+    background-color: #4D6A6D;
+    border-radius: 4px;
+    font: 1.5rem Blinker;
+    color: white;
+    padding: 1rem 2rem;
+    margin-left: 2rem;
+}
+
+
+#InformacaoSuperTrunfo p{
+    font: 1.5rem Blinker;
+    color: #4D6A6D;
+    text-align: justify;
+}
+
+
+.galeria{
+    background-color: #4D6A6D;
+    border-radius: 4px;
+}
+
+.imgEvidente img {
+    width: 513px;     /* Keeps the image's aspect ratio */
+    display: block;      /* Removes extra spacing below the image */
+    margin-bottom: 10px; /* Space between main image and supporting images */
+}
+
+.imgSuporte {
+    display: flex;             /* Creates a flexible layout for the images */
+    flex-wrap: wrap;
+    margin: 0 3px ;
+    justify-content: space-between;
+}
+
+.imgSuporte img{
+    width: 250px;    /* Sets the width to half the container width minus a small gap */
+    height: auto;              /* Keeps the aspect ratio */
+    margin-bottom: 10px;       /* Spacing between supporting images */
+    cursor: pointer;         /* Change cursor to a pointer on hover */
+}
+
+.imgSuporte img:hover{
+    transform: scale(1.03);
+}

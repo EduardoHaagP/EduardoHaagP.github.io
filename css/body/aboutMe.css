@@ -1,0 +1,24 @@
+#sobremim h1{
+    font: 2.5rem "League Spartan";
+    color: #4D6A6D;
+    margin-bottom: 6rem;
+}
+
+#sobremim .sobreMimConteudo{
+    margin: 0 3rem;
+    display: inline-grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+#sobremim p{
+    text-align: justify;
+    font: 1.4rem Blinker;
+    color: #4D6A6D;
+}
+#sobremim span{
+    color: #2A3A3C;
+}
+#linhadotempo{
+    display: block;
+    margin: auto auto;
+}

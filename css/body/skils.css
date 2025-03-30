@@ -1,0 +1,71 @@
+#skilsconteudo{
+    display: flex;
+    justify-content: center;
+}
+
+#skils h1{
+    font: 2.5rem "League Spartan";
+    color: #4D6A6D;
+    margin-bottom: 6rem;
+}
+
+#skils #listaprincipal{
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+}
+#skils #listasecundaria{
+    display: flex;
+    gap: .5rem;
+
+}
+
+#skils ul{
+    padding: 0;
+    margin: 0 !important;
+}
+
+#skils li{
+    list-style: none;
+
+}
+
+#skils #listaprincipal:first-child{
+    margin-right: 2rem;
+
+}
+#skils #listaprincipal:nth-child(2){
+    margin-right: 2rem;
+}
+
+#skils li:last-child{
+    margin-right: none;
+}
+
+#skils .imgDecorativa{
+    max-width: 10rem;
+    margin-bottom: 1.3125rem;
+}
+
+#imgC{
+margin-top: 1rem;
+   margin-bottom: 2.49rem !important; 
+}
+
+#skils a{
+    display: inline-block;
+    background-color: #4D6A6D;
+    padding: 10px 26.283px;
+    margin-top: 1rem;
+    border-radius: 0.25rem;
+    color: #D0DDD7;
+    font: 1.2rem "Blinker", sans-serif;
+    text-decoration: none;
+}
+
+#skils a:hover{
+    background-color: #2A3A3C;
+    color: #D0DDD7;
+}
