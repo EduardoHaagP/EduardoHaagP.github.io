@@ -54,3 +54,8 @@ header li::after {
 header li:hover::after {
     width: 100%; 
 }
+@media (max-width: 1520px) {
+    header h2{
+        display: none;
+    }
+  }

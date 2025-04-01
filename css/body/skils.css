@@ -29,7 +29,6 @@
 
 #skils li{
     list-style: none;
-
 }
 
 #skils #listaprincipal:first-child{
@@ -55,7 +54,7 @@ margin-top: 1rem;
 }
 
 #skils a{
-    display: inline-block;
+    display: block;
     background-color: #4D6A6D;
     padding: 10px 26.283px;
     margin-top: 1rem;
@@ -63,9 +62,17 @@ margin-top: 1rem;
     color: #D0DDD7;
     font: 1.2rem "Blinker", sans-serif;
     text-decoration: none;
+    text-align: center;
 }
 
 #skils a:hover{
     background-color: #2A3A3C;
     color: #D0DDD7;
+}
+
+@media (max-width: 1200px) {
+    #skils a{
+        font-size: 1rem;
+    }
+
 }

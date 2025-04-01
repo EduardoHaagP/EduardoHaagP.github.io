@@ -1,10 +1,11 @@
-body{
+body {
     margin: 0;
     background-color: #f2f2f2;
 }
+
 a {
-    text-decoration: none; 
-    color: inherit; 
+    text-decoration: none;
+    color: inherit;
 }
 
 /* header*/
@@ -15,7 +16,35 @@ header #cabecalho,
 #introducao,
 #sobremim,
 #skils,
-#projetos{
+#projetos,
+#footerConteudo {
     margin: 0rem 13rem 10rem;
-    
+
+}
+
+@media (max-width: 1200px) {
+
+    header #cabecalho,
+    #introducao,
+    #sobremim,
+    #skils,
+    #projetos,
+    #footerConteudo {
+        margin: 0rem 10rem 5rem;
+
+    }
+
+}
+@media (max-width: 900px) {
+
+    header #cabecalho,
+    #introducao,
+    #sobremim,
+    #skils,
+    #projetos,
+    #footerConteudo {
+        margin: 0rem 5rem 5rem;
+
+    }
+
 }
