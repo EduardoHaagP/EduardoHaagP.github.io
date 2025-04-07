@@ -110,3 +110,16 @@
     }
 
 }
+@media (max-width: 1200px) {
+    #projetos h1 {
+        font-size: 2rem;
+    }
+
+    #projetos span{
+        display: none;
+    }
+
+}
+
+
+

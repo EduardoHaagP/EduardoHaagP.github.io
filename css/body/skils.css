@@ -16,15 +16,19 @@
     align-items: center;
     gap: 10rem;
 }
+
+
 #skils #listasecundaria{
     display: flex;
     gap: .5rem;
+    justify-content: center;
 
 }
 
 #skils ul{
     padding: 0;
     margin: 0 !important;
+    display: flex;
 }
 
 #skils li{
@@ -44,7 +48,7 @@
 }
 
 #skils .imgDecorativa{
-    max-width: 10rem;
+    max-width: 100%;
     margin-bottom: 1.3125rem;
 }
 
@@ -63,6 +67,7 @@ margin-top: 1rem;
     font: 1.2rem "Blinker", sans-serif;
     text-decoration: none;
     text-align: center;
+    justify-content: center;
 }
 
 #skils a:hover{
@@ -70,3 +75,18 @@ margin-top: 1rem;
     color: #D0DDD7;
 }
 
+@media (max-width: 1200px) {
+    #skils h1{
+        font-size: 2rem;
+    }
+    }
+
+
+@media (min-width: 800px) {
+    #skils a{
+        font-size: 1rem;
+    }
+    #skils #listaprincipal{
+        gap: 6rem;
+    }
+}
