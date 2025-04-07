@@ -90,3 +90,12 @@ margin-top: 1rem;
         gap: 6rem;
     }
 }
+
+@media (min-width: 600px) {
+    #skils a{
+        font-size: .7rem;
+    }
+    #skils #listaprincipal{
+        gap: 6rem;
+    }
+}
