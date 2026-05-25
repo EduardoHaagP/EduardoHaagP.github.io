@@ -1,31 +1,75 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const featuredImageContainer = document.getElementById('containerImgEvidente');
-    let featuredImage = document.getElementById('ImagemEvidente');
-    const supportingImages = document.querySelectorAll('.imagemSuporte');
+document.addEventListener('DOMContentLoaded', function () {
 
-    supportingImages.forEach(img => {
-      img.addEventListener('click', function() {
-        // Get the clicked image's source and alt text
-        const newFeaturedSrc = this.src;
-        const newFeaturedAlt = this.alt;
+  // ── HAMBURGER MENU ──
+  const hamburger = document.getElementById('hamburger');
+  const navMobile = document.getElementById('navMobile');
 
-        // Get the current featured image's source and alt text
-        const oldFeaturedSrc = featuredImage.src;
-        const oldFeaturedAlt = featuredImage.alt;
+  hamburger.addEventListener('click', () => {
+    navMobile.classList.toggle('open');
+  });
 
-        // Update the featured image's source and alt text
-        const newImg = document.createElement('img');
-        newImg.src = newFeaturedSrc;
-        newImg.alt = newFeaturedAlt;
-        newImg.id = 'featuredImage';
-        featuredImageContainer.innerHTML = ''; //clear old image
-        featuredImageContainer.appendChild(newImg); //append new image
-        featuredImage = document.getElementById('featuredImage');
+  navMobile.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => navMobile.classList.remove('open'));
+  });
 
-        // Update the clicked supporting image's source and alt text to the old featured image
-        this.src = oldFeaturedSrc;
-        this.alt = oldFeaturedAlt;
+  // ── GALLERY SWAP ──
+  document.querySelectorAll('.thumb').forEach(thumb => {
+    thumb.addEventListener('click', function () {
+      const targetId = this.dataset.target;
+      const mainImg = document.getElementById(targetId);
 
-      });
+      // swap src
+      const tempSrc = mainImg.src;
+      const tempAlt = mainImg.alt;
+      mainImg.src = this.src;
+      mainImg.alt = this.alt;
+      this.src = tempSrc;
+      this.alt = tempAlt;
+
+      // active state
+      document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+      this.classList.add('active');
     });
   });
+
+  // ── NAV ACTIVE ON SCROLL ──
+  const sections = document.querySelectorAll('section[id]');
+  const navAs = document.querySelectorAll('.nav-links a');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navAs.forEach(a => {
+          a.style.color = a.getAttribute('href') === '#' + entry.target.id
+            ? 'var(--text)'
+            : '';
+        });
+      }
+    });
+  }, { threshold: 0.4 });
+
+  sections.forEach(s => observer.observe(s));
+
+  // ── FADE IN ON SCROLL ──
+  const fadeEls = document.querySelectorAll('.skill-block, .proj-card, .info-card');
+  fadeEls.forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(16px)';
+    el.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+  });
+
+  const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }, 60 * (Array.from(fadeEls).indexOf(entry.target) % 6));
+        fadeObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  fadeEls.forEach(el => fadeObserver.observe(el));
+
+});

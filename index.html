@@ -1,155 +1,487 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-    <title>Eduardo Haag</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&display=swap" rel="stylesheet">
+  <title>Eduardo Haag</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <header>
-        <div id="cabecalho">
+
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <span class="nav-brand">EH<span class="blink">_</span></span>
+      <ul class="nav-links">
+        <li><a href="#sobre">sobre</a></li>
+        <li><a href="#skills">skills</a></li>
+        <li><a href="#projetos">projetos</a></li>
+        <li><a href="#contato">contato</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="#sobre">sobre</a>
+      <a href="#skills">skills</a>
+      <a href="#projetos">projetos</a>
+      <a href="#contato">contato</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-tag">
+          <span class="status-dot"></span>disponível para oportunidades
+        </div>
+        <h1 class="hero-name">Eduardo<br><em>Haag.</em></h1>
+        <p class="hero-sub">Estudante de Engenharia de Computação na UTFPR. Transformo lógica em interfaces e hardware em código.</p>
+        <div class="hero-btns">
+          <a href="#projetos" class="btn-primary">Ver projetos</a>
+          <a href="#contato" class="btn-ghost">Entrar em contato</a>
+        </div>
+      </div>
+      <div class="hero-deco" aria-hidden="true">
+        <div class="deco-bracket">{ }</div>
+        <div class="deco-lines">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">scroll ↓</div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-num">01</span>
+        <h2 class="section-title">Sobre mim</h2>
+      </div>
+      <div class="sobre-grid">
+        <div class="sobre-bio">
+          <p>Meu nome é <strong>Eduardo Haag</strong>, sou estudante de <strong>Engenharia de Computação</strong> com formação técnica em Informática. Tenho experiência prática em desenvolvimento de software, sistemas embarcados e interfaces web.</p>
+          <p>Participei de um intercâmbio na <strong>Stetson University</strong>, atuei no <strong>PIBIC Jr</strong> e num projeto de extensão no <strong>Edhucca</strong>, onde ensinei noções de informática.</p>
+        </div>
+        <div class="sobre-cards">
+          <div class="info-card">
+            <div class="info-card-label">formação</div>
+            <div class="info-card-val">Eng. Computação — <em>UTFPR</em><br>Técnico em Informática</div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-label">intercâmbio</div>
+            <div class="info-card-val"><em>Stetson University</em><br>EUA</div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-label">foco atual</div>
+            <div class="info-card-val">Sistemas embarcados<br><em>ATmega328P · Arduino</em></div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-label">experiência</div>
+            <div class="info-card-val">PIBIC Jr<br><em>Projeto Edhucca</em></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-num">02</span>
+        <h2 class="section-title">Skills & Roadmap</h2>
+      </div>
+
+      <div class="skills-list">
+
+        <!-- C -->
+        <div class="skill-block" data-skill="c">
+          <div class="skill-main">
+            <div class="skill-left">
+              <div class="skill-info">
+                <span class="skill-name">C</span>
+                <span class="skill-sublabel">linguagem principal</span>
+              </div>
+              <div class="skill-dots">
+                <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot half"></div><div class="dot"></div>
+              </div>
+            </div>
+            <div class="skill-right">
+              <p class="skill-desc">Structs, ponteiros, alocação dinâmica, manipulação de arquivos e <em>modularização</em>. Base sólida para sistemas de baixo nível.</p>
+              <div class="chips">
+                <div class="chip chip-green">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                  <span>Super Trunfo</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-next">
+            <span class="next-label">próximos passos</span>
+            <div class="next-chips">
+              <div class="next-chip"><span>multithreading com pthreads</span></div>
+              <div class="next-chip"><span>sockets / comunicação</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- C++ -->
+        <div class="skill-block" data-skill="cpp">
+          <div class="skill-main">
+            <div class="skill-left">
+              <div class="skill-info">
+                <span class="skill-name">C++</span>
+                <span class="skill-sublabel">orientação a objetos</span>
+              </div>
+              <div class="skill-dots">
+                <div class="dot on"></div><div class="dot on"></div><div class="dot half"></div><div class="dot"></div><div class="dot"></div>
+              </div>
+            </div>
+            <div class="skill-right">
+              <p class="skill-desc">Classes, herança e encapsulamento aplicados a um sistema real. <em>Modelagem de domínio</em> e código orientado a objetos.</p>
+              <div class="chips">
+                <div class="chip chip-green">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3"/><rect x="9" y="11" width="14" height="10" rx="1"/></svg>
+                  <span>Sistema de Concessionária</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-next">
+            <span class="next-label">próximos passos</span>
+            <div class="next-chips">
+              <div class="next-chip"><span>templates e STL</span></div>
+              <div class="next-chip"><span>design patterns</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Python -->
+        <div class="skill-block" data-skill="python">
+          <div class="skill-main">
+            <div class="skill-left">
+              <div class="skill-info">
+                <span class="skill-name">Python</span>
+                <span class="skill-sublabel">estruturas de dados</span>
+              </div>
+              <div class="skill-dots">
+                <div class="dot on"></div><div class="dot on"></div><div class="dot half"></div><div class="dot"></div><div class="dot"></div>
+              </div>
+            </div>
+            <div class="skill-right">
+              <p class="skill-desc">Árvores, grafos, listas ligadas e algoritmos de busca/ordenação. Foco em <em>análise de complexidade</em>.</p>
+              <div class="chips">
+                <div class="chip chip-py">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h6l2 4H5zm13 0h3v10h-3zm-6 4h6v14H10zm3 10h4"/></svg>
+                  <span>Estruturas de Dados II</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-next">
+            <span class="next-label">próximos passos</span>
+            <div class="next-chips">
+              <div class="next-chip"><span>numpy / ciência de dados</span></div>
+              <div class="next-chip"><span>scripts de automação</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Embarcados -->
+        <div class="skill-block" data-skill="embedded">
+          <div class="skill-main">
+            <div class="skill-left">
+              <div class="skill-info">
+                <span class="skill-name">Embarcados</span>
+                <span class="skill-sublabel">arduino · atmega328p</span>
+              </div>
+              <div class="skill-dots">
+                <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div><div class="dot"></div>
+              </div>
+            </div>
+            <div class="skill-right">
+              <p class="skill-desc">GPIO, timers, ADC e registradores diretos do <em>ATmega328P</em>. Do Arduino até programação bare-metal.</p>
+              <div class="chips">
+                <div class="chip chip-green">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                  <span>Semáforo Arduino</span>
+                </div>
+                <div class="chip chip-green">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/></svg>
+                  <span>ATmega328P ADC</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-next">
+            <span class="next-label">próximos passos</span>
+            <div class="next-chips">
+              <div class="next-chip"><span>comunicação I2C / SPI</span></div>
+              <div class="next-chip"><span>RTOS básico</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- HTML/CSS -->
+        <div class="skill-block" data-skill="web">
+          <div class="skill-main">
+            <div class="skill-left">
+              <div class="skill-info">
+                <span class="skill-name">HTML / CSS</span>
+                <span class="skill-sublabel">front-end</span>
+              </div>
+              <div class="skill-dots">
+                <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div><div class="dot"></div>
+              </div>
+            </div>
+            <div class="skill-right">
+              <p class="skill-desc">Layouts com <em>Grid e Flexbox</em>, responsividade, semântica e animações CSS. Capaz de construir interfaces do zero.</p>
+              <div class="chips">
+                <div class="chip chip-amber">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                  <span>Este portfólio</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-next">
+            <span class="next-label">próximos passos</span>
+            <div class="next-chips">
+              <div class="next-chip"><span>animações avançadas</span></div>
+              <div class="next-chip"><span>acessibilidade (WCAG)</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="skill-block" data-skill="js">
+          <div class="skill-main">
+            <div class="skill-left">
+              <div class="skill-info">
+                <span class="skill-name">JavaScript</span>
+                <span class="skill-sublabel">interatividade</span>
+              </div>
+              <div class="skill-dots">
+                <div class="dot on"></div><div class="dot on"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+              </div>
+            </div>
+            <div class="skill-right">
+              <p class="skill-desc">Manipulação do <em>DOM</em>, eventos e lógica de interação. Usado para adicionar dinamismo sem frameworks.</p>
+              <div class="chips">
+                <div class="chip chip-amber">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                  <span>Este portfólio</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-next">
+            <span class="next-label">próximos passos</span>
+            <div class="next-chips">
+              <div class="next-chip"><span>ES6+ / async await</span></div>
+              <div class="next-chip"><span>React (componentes)</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Git -->
+        <div class="skill-block" data-skill="git">
+          <div class="skill-main">
+            <div class="skill-left">
+              <div class="skill-info">
+                <span class="skill-name">Git</span>
+                <span class="skill-sublabel">controle de versão</span>
+              </div>
+              <div class="skill-dots">
+                <div class="dot on"></div><div class="dot on"></div><div class="dot half"></div><div class="dot"></div><div class="dot"></div>
+              </div>
+            </div>
+            <div class="skill-right">
+              <p class="skill-desc">Commits, branches e pull requests no fluxo <em>colaborativo</em> via GitHub.</p>
+              <div class="chips">
+                <div class="chip chip-purple">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  <span>github.com/EduardoHaagP</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-next">
+            <span class="next-label">próximos passos</span>
+            <div class="next-chips">
+              <div class="next-chip"><span>git flow / rebase</span></div>
+              <div class="next-chip"><span>CI/CD básico</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /skills-list -->
+
+      <div class="skills-legend">
+        <div class="leg-item"><div class="dot on"></div><span>dominado</span></div>
+        <div class="leg-item"><div class="dot half"></div><span>em desenvolvimento</span></div>
+        <div class="leg-item"><div class="dot"></div><span>não iniciado</span></div>
+        <div class="leg-item"><div class="leg-dash"></div><span>próximo passo</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETOS -->
+  <section id="projetos">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-num">03</span>
+        <h2 class="section-title">Projetos</h2>
+      </div>
+
+      <div class="projetos-grid">
+
+        <!-- Super Trunfo — card largo com galeria -->
+        <div class="proj-card proj-card--wide">
+          <div class="proj-card-top">
             <div>
-                <h1>Eduardo Haag</h1>
-                <h2>Estudante de engenharia da Computação</h2>
+              <div class="proj-badge badge-c">C</div>
+              <h3 class="proj-name">Super Trunfo</h3>
             </div>
-            <ul>
-                <li><a href="./index.html">home</a></li>
-                <li><a href="#sobremim">sobre</a></li>
-                <li><a href="#skils">skils</a></li>
-                <li><a href="#projetos">projetos</a></li>
-            </ul>
-        </div>
-    </header>
-    <div id="introducao">
-
-        <main>
-            <div class="texto">
-                <h1>TRANSFORMANDO IDEIAS EM CÓDIGO!</h1>
-                <h2>Sou um desenvolvedor em formação focado em criar soluções inovadoras e funcionais. Aqui você
-                    encontrará um pouco sobre mim, meus projetos, habilidades e minha jornada no mundo da tecnologia.
-                </h2>
-                <h3>Vamos explorar juntos?</h3>
-                <a href="#sobremim">Descubra mais sobre mim</a>
+            <a href="https://github.com/EduardoHaagP/supertrunfo" class="proj-link" target="_blank" rel="noopener">GitHub →</a>
+          </div>
+          <p class="proj-desc">Jogo de cartas digital desenvolvido em equipe com interface de terminal interativa. Implementa jogabilidade completa, edição e exclusão de cartas, e persistência de dados via arquivos.</p>
+          <div class="proj-tags">
+            <span>C</span><span>structs</span><span>file I/O</span><span>modularização</span><span>trabalho em equipe</span>
+          </div>
+          <div class="proj-gallery">
+            <div class="gallery-main">
+              <img id="mainImg" src="./img/Super Trunfo prints/Menu.png" alt="Menu do Super Trunfo">
             </div>
-            <img src="./img/homeimg.png" alt="programador">
-        </main>
-    </div>
-    <div id="sobremim">
-        <h1>SOBRE MIM</h1>
-        <div class="sobreMimConteudo">
-            <img src="./img/phonephotos.png" id="fotoCelular" alt="">
-            <div class="itensRight">
-                <p>Meu nome é <span>Eduardo Haag</span>, sou estudante de <span>Engenharia de Computação</span> e tenho
-                    formação <span>técnica em Informática</span>. Durante minha trajetória acadêmica, participei de um
-                    intercâmbio na <span>Stetson University</span> e do <span>PIBIC Jr</span><span id="textoExtra">, onde desenvolvi
-                    habilidades em pesquisa científica. Além disso, atuei em um projeto de extensão no
-                    <span>Edhucca</span>, ensinando noções básicas de informática.</span> Tenho experiência prática no
-                    desenvolvimento de software e na criação de interfaces web. Busco oportunidades para aplicar e
-                    expandir meus conhecimentos na área de tecnologia.</p>
-                <img src="./img/linhadotempo.png" id="linhadotempo" alt="">
+            <div class="gallery-thumbs">
+              <img src="./img/Super Trunfo prints/Menu.png" alt="Menu" class="thumb active" data-target="mainImg">
+              <img src="./img/Super Trunfo prints/JogarResultado.png" alt="Resultado" class="thumb" data-target="mainImg">
+              <img src="./img/Super Trunfo prints/BibliotecaDeCartasCartaSelecionarda.png" alt="Biblioteca" class="thumb" data-target="mainImg">
             </div>
-        </div>
-    </div>
-    <div id="skils">
-        <h1>SKILS</h1>
-        <div id="skilsconteudo">
-            <ul id="listaprincipal">
-                <li>
-                    <img src="./img/C.png" class="imgDecorativa" id="imgC" alt="">
-                    <ul id="listasecundaria">
-                        <li><img src="./img/EngrenagemCompleta.png" class="engrenagem" alt="Engrenagem Completa"></li>
-                        <li><img src="./img/EngrenagemCompleta.png" class="engrenagem" alt="Engrenagem Completa"></li>
-                        <li><img src="./img/EngrenagemCompleta.png" class="engrenagem" alt="Engrenagem Completa"></li>
-                        <li><img src="./img/EngrenagemParcial.png" class="engrenagem" alt="Engrenagem Parcial"></li>
-                        <li><img src="./img/EngrenagemVazia.png" class="engrenagem" alt="Engrenagem Vazia"></li>
-                    </ul>
-                    <a href="#projetos">Projetos em C</a>
-                </li>
-                <li>
-                    <img src="./img/HTML.png" class="imgDecorativa" alt="">
-                    <ul id="listasecundaria">
-                        <li><img src="./img/EngrenagemCompleta.png" class="engrenagem" alt="Engrenagem Completa"></li>
-                        <li><img src="./img/EngrenagemCompleta.png" class="engrenagem" alt="Engrenagem Completa"></li>
-                        <li><img src="./img/EngrenagemCompleta.png" class="engrenagem" alt="Engrenagem Completa"></li>
-                        <li><img src="./img/EngrenagemVazia.png" class="engrenagem" alt="Engrenagem Vazia"></li>
-                        <li><img src="./img/EngrenagemVazia.png" class="engrenagem" alt="Engrenagem Vazia"></li>
-                    </ul>
-                    <a href="#projetos">Projetos WEB</a>
-                </li>
-                <li>
-                    <img src="./img/CSS.png" class="imgDecorativa" alt="">
-                    <ul id="listasecundaria">
-                        <li><img src="./img/EngrenagemCompleta.png" class="engrenagem" alt="Engrenagem Completa"></li>
-                        <li><img src="./img/EngrenagemCompleta.png" class="engrenagem" alt="Engrenagem Completa"></li>
-                        <li><img src="./img/EngrenagemParcial.png" class="engrenagem" alt="Engrenagem Parcial"></li>
-                        <li><img src="./img/EngrenagemVazia.png" class="engrenagem" alt="Engrenagem Vazia"></li>
-                        <li><img src="./img/EngrenagemVazia.png" class="engrenagem" alt="Engrenagem Vazia"></li>
-                    </ul>
-                    <a href="#projetos">Projetos WEB</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div id="projetos">
-        <h1>PROJETOS</h1>
-        <div id="projetosConteudo">
-            <div id="InformacaoSuperTrunfo">
-                <div id="InformacaoSuperTrunfoTitulo">
-                    <img src="./img/C.png" alt="linguagem de programção C">
-                    <h2>Super Trunfo</h2>
-                </div>
-                <div>
-                    <p>Desenvolvi, em equipe, um jogo de cartas digital em C, implementando funcionalidades essenciais
-                        como jogabilidade, visualização, edição e exclusão de cartas. <span>O projeto envolveu a criação
-                            de uma interface intuitiva, manipulação de dados das cartas e a otimização da experiência do
-                            usuário, garantindo um jogo dinâmico e interativo.</span></p>
-                    <a href="https://github.com/EduardoHaagP/supertrunfo">Veja-o aqui no GitHub</a>
-                </div>
-            </div>
-            <div class="galeria">
-                <div class="imgEvidente" id="containerImgEvidente">
-                    <img id="ImagemEvidente" src="./img/Super Trunfo prints/Menu.png" alt="Imagem Menu">
-                </div>
-                <div class="imgSuporte">
-                    <img src="./img/Super Trunfo prints/JogarResultado.png" alt="Imagem Jogar" class="imagemSuporte">
-                    <img src="./img/Super Trunfo prints/BibliotecaDeCartasCartaSelecionarda.png"
-                        alt="Imagem Biblioteca De Cartas" class="imagemSuporte">
-                </div>
-            </div>
+          </div>
         </div>
 
-    </div>
-    <footer>
-        <div id="footerConteudo">
-            <div id="icons">
-                <ul>
-                    <li>
-                        <a href="www.linkedin.com/in/eduardohaag"><img src="./img/LinkedIn.png" alt=""></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/EduardoHaagP"><img src="./img/GitHub.png" alt=""></a>
-                    </li>
-                    <li>
-                        <a href="mailto:haagp001@gmail.com"><img src="./img/Mail.png" alt=""></a>
-                    </li>
-                </ul>
-            </div>
+        <!-- DriveTech -->
+        <div class="proj-card">
+          <div class="proj-card-top">
             <div>
-                <h3>Feito por Eduardo Haag</h3>
+              <div class="proj-badge badge-cpp">C++ · Qt</div>
+              <h3 class="proj-name">DriveTech</h3>
             </div>
+            <a href="https://github.com/EduardoHaagP" class="proj-link" target="_blank" rel="noopener">GitHub →</a>
+          </div>
+          <p class="proj-desc">Sistema desktop de gerenciamento de concessionária desenvolvido em C++ com Qt 6. Cadastro de clientes, registro de vendas, consulta de estoque e histórico — com login por vendedor e persistência em CSV.</p>
+          <div class="proj-tags">
+            <span>C++</span><span>Qt 6</span><span>OOP</span><span>Singleton</span><span>Strategy</span><span>CMake</span>
+          </div>
+          <div class="proj-detail">
+            <div class="proj-detail-item">
+              <span class="proj-detail-label">padrões</span>
+              <span class="proj-detail-val">Singleton (gerenciadores) · Strategy (descontos)</span>
+            </div>
+            <div class="proj-detail-item">
+              <span class="proj-detail-label">entidades</span>
+              <span class="proj-detail-val">Veículo · Cliente PF/PJ · Vendedor · Venda</span>
+            </div>
+          </div>
         </div>
-    </footer>
 
-    <script src="./js/main.js"></script>
+        <!-- Semáforo Arduino -->
+        <div class="proj-card">
+          <div class="proj-card-top">
+            <div>
+              <div class="proj-badge badge-embedded">Arduino · Hardware</div>
+              <h3 class="proj-name">Semáforo de Pedestre</h3>
+            </div>
+          </div>
+          <p class="proj-desc">Semáforo acionado por botão de pedestre, desenvolvido em equipe para a disciplina de Materiais e Equipamentos Elétricos na UTFPR. Inclui ciclo com amarelo, vermelho, verde piscante e período de latência anti-reativação.</p>
+          <div class="proj-tags">
+            <span>Arduino UNO</span><span>C</span><span>GPIO</span><span>interrupts</span><span>millis()</span><span>KiCad</span>
+          </div>
+          <div class="proj-detail">
+            <div class="proj-detail-item">
+              <span class="proj-detail-label">hardware</span>
+              <span class="proj-detail-val">5 LEDs · resistores 150Ω e 10kΩ · push-button · protoboard</span>
+            </div>
+            <div class="proj-detail-item">
+              <span class="proj-detail-label">ferramentas</span>
+              <span class="proj-detail-val">SimulIDE · Tinkercad · KiCad (esquemático + PCB)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Algoritmos de Ordenação / ED2 -->
+        <div class="proj-card">
+          <div class="proj-card-top">
+            <div>
+              <div class="proj-badge badge-py">Python · ED2</div>
+              <h3 class="proj-name">Estrutura de Dados 2</h3>
+            </div>
+            <a href="https://github.com/EduardoHaagP" class="proj-link" target="_blank" rel="noopener">GitHub →</a>
+          </div>
+          <p class="proj-desc">Repositório com três atividades práticas da disciplina de ED2 na UTFPR, cobrindo algoritmos de ordenação, keysorting e índices secundários sobre datasets reais.</p>
+          <div class="proj-tags">
+            <span>Python</span><span>algoritmos</span><span>estruturas de dados</span><span>busca binária</span><span>índices</span>
+          </div>
+          <div class="proj-detail">
+            <div class="proj-detail-item">
+              <span class="proj-detail-label">ativ. 1</span>
+              <span class="proj-detail-val">Benchmark de 7 algoritmos de ordenação — comparações e tempo em vetores crescente, decrescente e aleatório</span>
+            </div>
+            <div class="proj-detail-item">
+              <span class="proj-detail-label">ativ. 2</span>
+              <span class="proj-detail-val">Keysorting em base de heróis Marvel/DC com Insertion, Merge, Quick e Heap Sort — ordem crescente e decrescente</span>
+            </div>
+            <div class="proj-detail-item">
+              <span class="proj-detail-label">ativ. 3</span>
+              <span class="proj-detail-val">Índices secundários para consultas simples e booleanas (AND / OR) em dataset Spotify com 1.2M+ registros</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-num">04</span>
+        <h2 class="section-title">Contato</h2>
+      </div>
+      <p class="contato-sub">Aberto a oportunidades, colaborações e conversas sobre tecnologia.</p>
+      <div class="contato-links">
+        <a href="https://www.linkedin.com/in/eduardohaag" class="contato-btn" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/EduardoHaagP" class="contato-btn" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          <span>GitHub</span>
+        </a>
+        <a href="mailto:haagp001@gmail.com" class="contato-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>haagp001@gmail.com</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-brand"><span class="footer-dot"></span>Eduardo Haag · 2025</span>
+      <span class="footer-made">feito com HTML / CSS / JS</span>
+    </div>
+  </footer>
+
+  <script src="./js/main.js"></script>
 </body>
-
 </html>
